@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section-container{
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .input label, .submit-btn {
+    font-family: 'Roboto', sans-serif;
+  }
+  #empresa-nome {
+    background-color: white;
+    position: absolute;
+    top: 35px;
+    right: 5vw;
+    padding: 5px 15px;
+  }
+  #e1 {
+    color: blue;
+    font-family: 'Roboto', sans-serif;
+  }
+  #e2 {
+    color: red;
+    font-family: 'Quicksand', sans-serif;  
+  }  
+  #bfimage {
+      width: 100%;
+  }
+  #call-to-action{
+      background-color: white;
+      padding: 3px 5px;
+      position: absolute;
+      bottom: 35px;
+      left: 4vw;
+  }
+  .background-section-one{
+    position: relative;
+    background-image: linear-gradient(black, white);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .background-section-two{
+    position: relative;
+    background-image: linear-gradient(white, black);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .card-container{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0px;
+    background: #000;
+    width: 100%;
+  }
+  #form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+  }
+  
+  .input{
+    color: #fff;
+    margin: 10px 0px;
+  }
+  input {
+    background: #fff;
+    color: #000;
+  }
+  .submit-btn {
+    padding: 0px 15px;
+  }
+  
+  footer{
+      position: relative;
+    height: 150px;
+    padding: 25px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+  }
+  #empresa-nome-footer {
+    position: absolute;
+    font-size: medium;
+    bottom: 35px;
+    left: 5vw;
+  }
+
+
+
+
+  /* medium */
+  @media screen and (max-width: 992px) {
+    
+    #form{
+        width: 100%;
+    }      
+
+  }
+
+  /* small */
+  @media screen and (max-width: 700px) {
+    .card-container{
+        justify-content: center;        
+    }
+    .input {
+        width: 55%;
+    }
+    
+    #call-to-action {
+        margin: 0px;
+        padding: 0px;
+        left: 0px;
+        width: 100%;
+
+    }
+
+    .section-container{
+        height: 500px;
+    }
+    .background-section-one{
+        background-attachment: scroll;
+    }
+      .background-section-two{
+        background-attachment: scroll;
+      }
+  }
