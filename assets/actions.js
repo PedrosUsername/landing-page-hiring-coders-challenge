@@ -1,21 +1,43 @@
-let form = document.getElementById("form");
-let name = document.getElementById("name");
-let dream = document.getElementById("dream-descript");
+/* form */
+let cadastrar_btn = document.querySelector(".submit-btn");
+let name = document.getElementById("nome");
+let email = document.getElementById("email");
 
-let button = document.getElementById("submit-button");
-
-button.addEventListener("click", register);
-
-
+cadastrar_btn.addEventListener("click", function(){
+    alert("nome:" + name.value + ", email: " + email.value);
+});
 
 
-function register(){
-    let ul = document.createElement('UL');
-    ul.innerText = name.value;
+/* carousel */
+let left_btn = document.getElementById("carousel-lftbtn")
+let right_btn = document.getElementById("carousel-rgtbtn")
+let cards = document.querySelectorAll(".card");
 
-    let li = document.createElement('LI');
-    li.innerHTML = dream.value;
+const carouselLen = cards.length;
+let carouselPos = 0;
 
-    ul.appendChild(li);
-    document.body.appendChild(ul);
-}
+left_btn.addEventListener("click", function(){
+    cards[carouselPos].classList.remove("card-focus1");
+    cards[carouselPos + 1].classList.remove("card-focus2");
+    
+    if (carouselPos == 0)
+        carouselPos = carouselLen - 2;
+    else
+        carouselPos -= 1;
+
+    cards[carouselPos].classList.add("card-focus1");
+    cards[carouselPos + 1].classList.add("card-focus2");
+});
+
+right_btn.addEventListener("click", function(){
+    cards[carouselPos].classList.remove("card-focus1");
+    cards[carouselPos + 1].classList.remove("card-focus2");
+    
+    if (carouselPos == carouselLen - 2)
+        carouselPos = 0;
+    else
+        carouselPos += 1;
+
+    cards[carouselPos].classList.add("card-focus1");
+    cards[carouselPos + 1].classList.add("card-focus2"); 
+});
