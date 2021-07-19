@@ -3,8 +3,18 @@ let cadastrar_btn = document.querySelector(".submit-btn");
 let name = document.getElementById("nome");
 let email = document.getElementById("email");
 
+let people = []
+let counter = 0;
+
+
 cadastrar_btn.addEventListener("click", function(){
-    alert("nome:" + name.value + ", email: " + email.value);
+    people[counter] = new Object();
+    people[counter].name = name.value;
+    people[counter].email = email.value;
+
+    console.log(people[counter]);
+    localStorage.setItem( name.value, email.value );
+    counter++;
 });
 
 
